@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nextera Digital Academy (NDA) — Franchise Partner | Student Registration</title>
+<meta name="description" content="Register for free digital skills courses at Nextera Digital Academy. Admission Manager: Muhammad Izhar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-deep:#0A3D91;
+    --blue-navy:#062B6B;
+    --blue-tint:#EAF2FF;
+    --blue-mid:#1656C7;
+    --yellow:#FFC93C;
+    --yellow-deep:#F5A800;
+    --white:#FFFFFF;
+    --ink:#0E1B3D;
+    --ink-soft:#4A5578;
+    --line:#DCE6F7;
+    --danger:#D64545;
+    --ok:#1E8E5A;
+    --radius:16px;
+    --shadow:0 10px 30px rgba(10,61,145,0.12);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:'Sora',sans-serif;}
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+  button{font-family:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- Skip / focus ---------- */
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,label:focus-visible{
+    outline:3px solid var(--yellow-deep);
+    outline-offset:2px;
+  }
+
+  /* ---------- Top strip ---------- */
+  .top-strip{
+    background:var(--blue-navy);
+    color:#CFE0FF;
+    font-size:13px;
+    text-align:center;
+    padding:8px 12px;
+    letter-spacing:.2px;
+  }
+  .top-strip strong{color:var(--yellow);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(1200px 500px at 15% -10%, rgba(255,201,60,0.18), transparent 60%),
+      linear-gradient(160deg, var(--blue-navy) 0%, var(--blue-deep) 55%, var(--blue-mid) 100%);
+    color:var(--white);
+    overflow:hidden;
+    padding:52px 0 64px;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-60px; top:-60px;
+    width:280px;height:280px;
+    background:var(--yellow);
+    opacity:.15;
+    border-radius:50%;
+    filter:blur(10px);
+  }
+  .hero-inner{position:relative;z-index:1;text-align:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,201,60,0.15);
+    border:1px solid rgba(255,201,60,0.4);
+    color:var(--yellow);
+    font-weight:600;
+    font-size:13px;
+    padding:7px 14px;
+    border-radius:999px;
+    margin-bottom:20px;
+  }
+  .hero h1{
+    font-size:clamp(26px,6vw,42px);
+    line-height:1.15;
+    font-weight:800;
+    margin:0 0 12px;
+  }
+  .hero h1 .accent{color:var(--yellow);}
+  .hero p.lead{
+    font-size:clamp(15px,3.4vw,18px);
+    color:#D9E6FF;
+    max-width:560px;
+    margin:0 auto 28px;
+    line-height:1.6;
+  }
+  .brand-card{
+    display:inline-block;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.18);
+    border-radius:var(--radius);
+    padding:18px 26px;
+    backdrop-filter:blur(6px);
+    margin-bottom:30px;
+  }
+  .brand-card .org{font-size:20px;font-weight:700;}
+  .brand-card .tag{font-size:13px;color:var(--yellow);font-weight:600;margin-top:4px;}
+  .brand-card .manager{font-size:13px;color:#C8D8F5;margin-top:8px;}
+  .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    border:none;border-radius:12px;
+    font-weight:700;
+    font-size:15px;
+    padding:14px 26px;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    text-decoration:none;
+  }
+  .btn:active{transform:scale(.98);}
+  .btn-primary{
+    background:var(--yellow);
+    color:var(--blue-navy);
+    box-shadow:0 8px 20px rgba(255,201,60,0.35);
+  }
+  .btn-primary:hover{background:var(--yellow-deep);}
+  .btn-outline{
+    background:transparent;
+    border:1.5px solid rgba(255,255,255,0.5);
+    color:var(--white);
+  }
+  .btn-outline:hover{background:rgba(255,255,255,0.1);}
+
+  /* ---------- Sections ---------- */
+  section{padding:56px 0;}
+  .section-head{text-align:center;max-width:620px;margin:0 auto 34px;}
+  .section-head .kicker{
+    color:var(--blue-mid);
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .section-head h2{
+    font-size:clamp(22px,4.5vw,30px);
+    font-weight:800;
+    margin:0 0 10px;
+    color:var(--ink);
+  }
+  .section-head p{color:var(--ink-soft);font-size:15px;line-height:1.6;margin:0;}
+
+  /* ---------- Courses ---------- */
+  .courses-bg{background:var(--blue-tint);}
+  .course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:14px;
+  }
+  .course-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    box-shadow:0 4px 14px rgba(10,61,145,0.06);
+  }
+  .course-card .num{
+    font-size:12px;font-weight:700;color:var(--blue-mid);
+    background:var(--blue-tint);
+    width:26px;height:26px;border-radius:8px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .course-card .cname{font-weight:700;font-size:15px;color:var(--ink);}
+  .course-card .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;}
+  .price-pill{
+    font-size:13px;font-weight:700;
+    padding:4px 10px;border-radius:999px;
+  }
+  .price-pill.basic{background:#E7F4EC;color:var(--ok);}
+  .price-pill.premium{background:#FFF1D6;color:var(--yellow-deep);}
+
+  .package-banner{
+    margin-top:26px;
+    background:linear-gradient(120deg,var(--blue-deep),var(--blue-mid));
+    color:var(--white);
+    border-radius:var(--radius);
+    padding:20px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    box-shadow:var(--shadow);
+  }
+  .package-banner .txt strong{color:var(--yellow);}
+  .package-banner .price{
+    font-family:'Sora',sans-serif;
+    font-size:26px;font-weight:800;color:var(--yellow);
+    white-space:nowrap;
+  }
+
+  /* ---------- Form ---------- */
+  .form-section{background:var(--white);}
+  .form-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:26px;
+    box-shadow:var(--shadow);
+  }
+  .field{margin-bottom:18px;}
+  .field label{
+    display:block;
+    font-weight:600;
+    font-size:14px;
+    margin-bottom:6px;
+    color:var(--ink);
+  }
+  .field label .req{color:var(--danger);}
+  .field input[type=text],
+  .field input[type=number],
+  .field input[type=tel],
+  .field select{
+    width:100%;
+    padding:12px 14px;
+    border:1.5px solid var(--line);
+    border-radius:10px;
+    font-size:15px;
+    font-family:inherit;
+    background:var(--white);
+    color:var(--ink);
+    transition:border-color .15s ease, box-shadow .15s ease;
+  }
+  .field input:focus,.field select:focus{
+    border-color:var(--blue-mid);
+    box-shadow:0 0 0 4px rgba(22,86,199,0.12);
+  }
+  .hint{font-size:12.5px;color:var(--ink-soft);margin-top:5px;}
+  .error-msg{font-size:12.5px;color:var(--danger);margin-top:5px;display:none;}
+  .field.invalid input,.field.invalid select{border-color:var(--danger);}
+  .field.invalid .error-msg{display:block;}
+
+  fieldset{border:none;padding:0;margin:0 0 18px;}
+  legend{
+    font-weight:600;font-size:14px;margin-bottom:10px;padding:0;color:var(--ink);
+  }
+  .course-select-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:10px;
+  }
+  .course-check{
+    position:relative;
+    border:1.5px solid var(--line);
+    border-radius:12px;
+    padding:12px 14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .course-check:hover{border-color:var(--blue-mid);}
+  .course-check input{
+    width:18px;height:18px;
+    accent-color:var(--blue-mid);
+    flex-shrink:0;
+  }
+  .course-check.checked{
+    border-color:var(--blue-mid);
+    background:var(--blue-tint);
+  }
+  .course-check .cc-text{display:flex;flex-direction:column;gap:2px;}
+  .course-check .cc-name{font-size:14px;font-weight:600;color:var(--ink);}
+  .course-check .cc-price{font-size:12.5px;color:var(--ink-soft);}
+
+  /* Sticky fee bar */
+  .fee-summary{
+    position:sticky;
+    bottom:0;
+    margin-top:20px;
+    background:var(--blue-navy);
+    color:var(--white);
+    border-radius:16px;
+    padding:16px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    flex-wrap:wrap;
+    box-shadow:0 -10px 24px rgba(6,43,107,0.25);
+  }
+  .fee-summary .label{font-size:13px;color:#B9CBF2;}
+  .fee-summary .amount{
+    font-family:'Sora',sans-serif;
+    font-size:24px;font-weight:800;color:var(--yellow);
+  }
+  .fee-summary .badge{
+    font-size:12px;font-weight:700;
+    background:var(--yellow);color:var(--blue-navy);
+    padding:4px 10px;border-radius:999px;
+    display:none;
+  }
+  .fee-summary.package .badge{display:inline-block;}
+
+  /* Upload */
+  .upload-box{
+    border:1.5px dashed var(--line);
+    border-radius:14px;
+    padding:22px;
+    text-align:center;
+    cursor:pointer;
+    background:var(--blue-tint);
+    transition:border-color .15s ease;
+  }
+  .upload-box:hover{border-color:var(--blue-mid);}
+  .upload-box input{display:none;}
+  .upload-box .icon{font-size:26px;margin-bottom:6px;}
+  .upload-box .main-txt{font-weight:600;font-size:14px;color:var(--ink);}
+  .upload-box .sub-txt{font-size:12.5px;color:var(--ink-soft);margin-top:4px;}
+  .preview{margin-top:14px;display:none;align-items:center;gap:12px;}
+  .preview img{width:64px;height:64px;object-fit:cover;border-radius:10px;border:1px solid var(--line);}
+  .preview .pinfo{font-size:13px;color:var(--ink-soft);}
+  .preview .pinfo strong{display:block;color:var(--ink);font-size:14px;}
+
+  /* Payment card */
+  .pay-card{
+    background:var(--blue-tint);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:20px;
+    margin-bottom:22px;
+  }
+  .pay-card h3{margin:0 0 14px;font-size:17px;}
+  .pay-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px;}
+  .pay-row:last-of-type{border-bottom:none;}
+  .pay-row .k{color:var(--ink-soft);}
+  .pay-row .v{font-weight:700;color:var(--ink);}
+  .method-tags{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+  .method-tag{
+    background:var(--white);border:1px solid var(--line);
+    padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;
+  }
+  .method-tag.ep{color:var(--ok);}
+  .method-tag.jc{color:#C7127A;}
+
+  .form-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;}
+  .form-actions .btn{flex:1;min-width:160px;}
+  .btn-secondary{
+    background:var(--white);
+    border:1.5px solid var(--blue-mid);
+    color:var(--blue-mid);
+  }
+  .btn-secondary:hover{background:var(--blue-tint);}
+  .btn-submit{
+    background:var(--blue-deep);
+    color:var(--white);
+  }
+  .btn-submit:hover{background:var(--blue-navy);}
+  .btn-submit:disabled{opacity:.5;cursor:not-allowed;}
+
+  .success-box{
+    display:none;
+    margin-top:18px;
+    background:#E9F8EF;
+    border:1px solid #BEE8CC;
+    color:#155C36;
+    border-radius:12px;
+    padding:16px;
+    font-size:14px;
+    line-height:1.6;
+  }
+  .success-box strong{display:block;margin-bottom:4px;font-size:15px;}
+
+  /* Footer */
+  footer{
+    background:var(--blue-navy);
+    color:#C9D8F5;
+    text-align:center;
+    padding:34px 20px 26px;
+  }
+  footer .org{color:var(--white);font-weight:800;font-size:18px;font-family:'Sora',sans-serif;}
+  footer .tag{color:var(--yellow);font-weight:600;font-size:13px;margin-top:4px;}
+  footer .manager{font-size:13px;margin-top:10px;color:#AFC2EE;}
+  footer .copyright{font-size:12px;margin-top:18px;color:#7C93C7;}
+
+  @media (max-width:520px){
+    .form-actions{flex-direction:column;}
+    .package-banner{flex-direction:column;align-items:flex-start;}
+    .fee-summary{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<div class="top-strip">🎓 <strong>100% Free Learning</strong> — Only a one-time registration fee applies</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">🚀 Pakistan's Biggest Free Digital Learning Platform</span>
+    <h1>Learn In-Demand Digital Skills<br><span class="accent">Absolutely Free</span></h1>
+    <p class="lead">Nextera Digital Academy gives you access to 9 career-ready courses — from AI to Freelancing — taught by industry practitioners. Pay a small one-time registration fee and start learning today.</p>
+
+    <div class="brand-card">
+      <div class="org">Nextera Digital Academy (NDA)</div>
+      <div class="tag">Franchise Partner</div>
+      <div class="manager">Admission Manager: Muhammad Izhar</div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#register" class="btn btn-primary">Register Now</a>
+      <a href="#courses" class="btn btn-outline">View Courses</a>
+    </div>
+  </div>
+</header>
+
+<!-- COURSES -->
+<section id="courses" class="courses-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Our Courses</div>
+      <h2>9 Courses. One Small Fee.</h2>
+      <p>Choose any course individually, or unlock all 9 with our special package rate.</p>
+    </div>
+
+    <div class="course-grid" id="courseInfoGrid"></div>
+
+    <div class="package-banner">
+      <div class="txt">🎉 Enroll in <strong>all 9 courses</strong> for a special discounted registration fee.</div>
+      <div class="price">Rs. 1800 only</div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION FORM -->
+<section id="register" class="form-section">
+  <div class="wrap" style="max-width:720px;">
+    <div class="section-head">
+      <div class="kicker">Student Registration</div>
+      <h2>Reserve Your Seat</h2>
+      <p>Fill in your details, select your course(s), and complete payment to confirm registration.</p>
+    </div>
+
+    <form class="form-card" id="regForm" novalidate>
+
+      <div class="field" id="f-name">
+        <label for="fullName">Full Name <span class="req">*</span></label>
+        <input type="text" id="fullName" name="fullName" placeholder="e.g. Ayesha Khan" autocomplete="name">
+        <div class="error-msg">Please enter your full name.</div>
+      </div>
+
+      <div class="field" id="f-father">
+        <label for="fatherName">Father's Name <span class="req">*</span></label>
+        <input type="text" id="fatherName" name="fatherName" placeholder="e.g. Muhammad Khan">
+        <div class="error-msg">Please enter your father's name.</div>
+      </div>
+
+      <div class="field" id="f-edu">
+        <label for="education">Education <span class="req">*</span></label>
+        <select id="education" name="education">
+          <option value="">Select your education level</option>
+          <option>Matric</option>
+          <option>Intermediate</option>
+          <option>Bachelor's</option>
+          <option>Master's</option>
+          <option>Other</option>
+        </select>
+        <div class="error-msg">Please select your education level.</div>
+      </div>
+
+      <div class="field" id="f-whatsapp">
+        <label for="whatsapp">WhatsApp Number <span class="req">*</span></label>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="03XXXXXXXXX" inputmode="numeric" autocomplete="tel">
+        <div class="hint">We'll use this to confirm your registration.</div>
+        <div class="error-msg">Please enter a valid WhatsApp number.</div>
+      </div>
+
+      <div class="field" id="f-city">
+        <label for="city">City <span class="req">*</span></label>
+        <input type="text" id="city" name="city" placeholder="e.g. Lahore">
+        <div class="error-msg">Please enter your city.</div>
+      </div>
+
+      <div class="field" id="f-age">
+        <label for="age">Age <span class="req">*</span></label>
+        <input type="number" id="age" name="age" min="10" max="80" placeholder="e.g. 22">
+        <div class="error-msg">Please enter a valid age (10–80).</div>
+      </div>
+
+      <fieldset id="f-courses">
+        <legend>Select Course(s) <span class="req">*</span></legend>
+        <div class="course-select-grid" id="courseCheckGrid"></div>
+        <div class="error-msg" id="courseError" style="margin-top:8px;">Please select at least one course.</div>
+      </fieldset>
+
+      <div class="fee-summary" id="feeSummary">
+        <div>
+          <div class="label">Registration Fee</div>
+          <div class="amount" id="feeAmount">Rs. 0</div>
+        </div>
+        <span class="badge">🎉 Package Applied</span>
+        <button type="button" class="btn btn-outline" style="background:rgba(255,255,255,0.12);color:#fff;padding:10px 18px;" id="calcBtn">Calculate Fee</button>
+      </div>
+
+      <div class="pay-card" style="margin-top:24px;">
+        <h3>💳 Payment Details</h3>
+        <div class="pay-row"><span class="k">Account Title</span><span class="v">Muhammad Izhar</span></div>
+        <div class="pay-row"><span class="k">Account Number</span><span class="v">0328-5568826</span></div>
+        <div class="method-tags">
+          <span class="method-tag ep">✅ Easypaisa</span>
+          <span class="method-tag jc">✅ JazzCash</span>
+        </div>
+        <p class="hint" style="margin-top:12px;">Send the registration fee shown above to this account, then upload your payment screenshot below.</p>
+      </div>
+
+      <div class="field" id="f-upload">
+        <label for="screenshot">Payment Screenshot <span class="req">*</span></label>
+        <div class="upload-box" id="uploadBox">
+          <input type="file" id="screenshot" name="screenshot" accept="image/*">
+          <div class="icon">📤</div>
+          <div class="main-txt">Tap to upload your payment screenshot</div>
+          <div class="sub-txt">JPG or PNG · Maximum size 20MB</div>
+        </div>
+        <div class="preview" id="preview">
+          <img id="previewImg" alt="Payment screenshot preview">
+          <div class="pinfo"><strong id="previewName"></strong><span id="previewSize"></span></div>
+        </div>
+        <div class="error-msg">Please upload a valid screenshot (image, under 20MB).</div>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-secondary" id="calcBtn2">Calculate Fee</button>
+        <button type="submit" class="btn btn-submit" id="submitBtn">Submit Registration</button>
+      </div>
+
+      <div class="success-box" id="successBox">
+        <strong>🎉 Registration details ready!</strong>
+        <span id="successText"></span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="org">Nextera Digital Academy (NDA)</div>
+  <div class="tag">Franchise Partner</div>
+  <div class="manager">Admission Manager: Muhammad Izhar</div>
+  <div class="copyright">© 2026 Nextera Digital Academy. All rights reserved.</div>
+</footer>
+
+<script>
+(function(){
+  const COURSES = [
+    { id:"smm",  name:"Social Media Marketing",        price:150, tier:"basic" },
+    { id:"canva",name:"Canva Freelancing",              price:150, tier:"basic" },
+    { id:"video",name:"Video Editing & AI",             price:150, tier:"basic" },
+    { id:"eng",  name:"Spoken English",                 price:150, tier:"basic" },
+    { id:"seo",  name:"SEO & Content Writing",          price:150, tier:"basic" },
+    { id:"msof", name:"Microsoft Office",                price:150, tier:"basic" },
+    { id:"wp",   name:"AI WordPress Web Development",   price:300, tier:"premium" },
+    { id:"shop", name:"Shopify Store & Meta Ads",        price:300, tier:"premium" },
+    { id:"ai",   name:"Artificial Intelligence",      
